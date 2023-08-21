@@ -21,9 +21,8 @@ const clearProducts= () => {
 }
 
 const displayHomePage= async() => {
-    loader.style.display="none";
-    
     const products = await fetchProducts();
+    loader.style.display="none";
     allProducts=products;
     console.log(products);
     displayProducts(products);
